@@ -1,0 +1,5 @@
+# Generates random alphanumeric string, suitable for passwords etc.
+# Optional argument for length of string; defaults to 24.
+random() {
+    base64 /dev/urandom | tr -dc '[:alnum:]' | fold -w "${1:-24}" | head -n 1
+}

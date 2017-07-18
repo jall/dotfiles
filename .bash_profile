@@ -3,9 +3,14 @@ if [ -f ~/.profile ]; then
     source ~/.profile
 fi
 
+DOTFILES="${HOME}/dotfiles"
+
 # Include all sub-components for terminals.
-for DOTFILE in `find ${HOME}/dotfiles/system`
+for DOTFILE in `find ${DOTFILES}/system`
 do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 unset DOTFILE
+
+# Add git completion
+source "${HOME}/dotfiles/git/git-completion.bash"

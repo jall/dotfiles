@@ -1,0 +1,19 @@
+[user]
+	email = code@jall.me
+	name = Jon Hall
+[color]
+	status = true
+	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+[push]
+	default = simple
+[alias]
+	alias = config --get-regexp ^alias\\.
+	last = log -1 HEAD
+	nuke = !git reset --hard && git clean -df
+	undo = checkout HEAD --
+	unstage = reset HEAD --
+[includeIf "gitdir:~/Sites/"]
+    path = ~/dotfiles/git/.gitconfig_work

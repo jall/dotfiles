@@ -25,6 +25,7 @@ source install/brew.sh
 # And now most big dependencies through brew, then language specific package managers
 source install/brew-packages.sh
 source install/composer.sh
+source install/yarn.sh
 
 # OSX system settings
 source osx/defaults.sh

@@ -10,12 +10,6 @@ If you want to copy it, feel free!
 
 ## Install
 
-* Brew
-* git
-* Composer
-* Yarn/node
-* Go
-* hub
 * Phpstorm
 * Atom
 * FileZilla
@@ -38,6 +32,7 @@ If you want to copy it, feel free!
     * https://github.com/mathiasbynens/dotfiles/blob/master/.functions
     * http://nparikh.org/notes/zshrc.txt
 * Add some more terminal auto-completions?
+* Have a poke through /usr/local/bin for more things to load through package managers
 
 # Inspirations
 

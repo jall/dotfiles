@@ -6,7 +6,7 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Load helper functions for rest of script
 source "${DOTFILES_DIR}/system/.functions"
 
-# Update dotfiles itself first
+# Update dotfiles itself
 if is-executable git -a -d "${DOTFILES_DIR}/.git"; then git --work-tree="$DOTFILES_DIR" --git-dir="${DOTFILES_DIR}/.git" pull origin master; fi
 
 # Symlink dotfiles
@@ -21,6 +21,9 @@ ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
 
 # Homebrew first for OSX dependencies
 source install/brew.sh
+
+# And now most big dependencies through brew
+source install/brew-packages.sh
 
 # OSX system settings
 source osx/defaults.sh

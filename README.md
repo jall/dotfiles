@@ -16,9 +16,9 @@ If you want to copy it, feel free!
 * Chrome
 * FireFox
 * Spotify
+
 * vagrant
-* drush
-* drupal console
+* docker
 * Platform.sh
 
 ## Improvements
@@ -33,6 +33,7 @@ If you want to copy it, feel free!
     * http://nparikh.org/notes/zshrc.txt
 * Add some more terminal auto-completions?
 * Have a poke through /usr/local/bin for more things to load through package managers
+* Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
 
 # Inspirations
 

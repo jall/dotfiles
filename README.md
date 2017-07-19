@@ -6,6 +6,13 @@ The setup is currently mostly for OSX, although many tools/config files are envi
 
 If you want to copy it, feel free!
 
+# Usage
+
+```
+git clone https://github.com/jall/dotfiles.git "${HOME}/dotfiles"
+${HOME}/dotfiles/install.sh
+```
+
 # Todo
 
 ## Install
@@ -34,6 +41,8 @@ If you want to copy it, feel free!
 * Add some more terminal auto-completions?
 * Have a poke through /usr/local/bin for more things to load through package managers
 * Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
+* Stop script if things go wrong!
+* Add tests?
 
 # Inspirations
 

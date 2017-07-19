@@ -6,7 +6,7 @@ fi
 DOTFILES="${HOME}/dotfiles"
 
 # Include all sub-components for terminals.
-for DOTFILE in `find ${DOTFILES}/system`
+for DOTFILE in `find ${DOTFILES}/terminal`
 do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done

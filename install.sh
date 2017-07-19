@@ -4,7 +4,7 @@
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Load helper functions for rest of script
-source "${DOTFILES_DIR}/system/.functions"
+source "${DOTFILES_DIR}/terminal/.functions"
 
 # Update dotfiles itself
 if is-executable git -a -d "${DOTFILES_DIR}/.git"; then git --work-tree="$DOTFILES_DIR" --git-dir="${DOTFILES_DIR}/.git" pull origin master; fi

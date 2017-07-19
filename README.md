@@ -8,10 +8,6 @@ If you want to copy it, feel free!
 
 # Todo
 
-## Config
-
-* OSX defaults
-
 ## Install
 
 * Brew
@@ -38,6 +34,10 @@ If you want to copy it, feel free!
 * Clean out unused aliases
 * Comment EVERYTHING
     * .inputrc
+* Harvest nice functions from people
+    * https://github.com/mathiasbynens/dotfiles/blob/master/.functions
+    * http://nparikh.org/notes/zshrc.txt
+* Add some more terminal auto-completions?
 
 # Inspirations
 

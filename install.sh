@@ -22,8 +22,9 @@ ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
 # Homebrew first for OSX dependencies
 source install/brew.sh
 
-# And now most big dependencies through brew
+# And now most big dependencies through brew, then language specific package managers
 source install/brew-packages.sh
+source install/composer.sh
 
 # OSX system settings
 source osx/defaults.sh

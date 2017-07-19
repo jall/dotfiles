@@ -10,8 +10,8 @@ source "${DOTFILES_DIR}/terminal/.functions"
 if is-executable git -a -d "${DOTFILES_DIR}/.git"; then git --work-tree="$DOTFILES_DIR" --git-dir="${DOTFILES_DIR}/.git" pull origin master; fi
 
 # Symlink dotfiles
-ln -sv "${DOTFILES_DIR}/.bash_profile" "${HOME}"
-ln -sv "${DOTFILES_DIR}/.inputrc" "${HOME}"
+ln -sv "${DOTFILES_DIR}/system/.bash_profile" "${HOME}"
+ln -sv "${DOTFILES_DIR}/system/.inputrc" "${HOME}"
 ln -sv "${DOTFILES_DIR}/git/.gitconfig" "${HOME}"
 ln -sv "${DOTFILES_DIR}/git/.gitignore_global" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"

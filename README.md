@@ -19,7 +19,6 @@ ${HOME}/dotfiles/install.sh
 
 * phpStorm/gogland plugins?
 * phpStorm/gogland settings?
-* LaTeX?
 
 ## Improvements
 
@@ -34,6 +33,11 @@ ${HOME}/dotfiles/install.sh
 * Add symlink overrides for certain brew bits?
     * `brew link --overwrite python3`
     * `brew link --overwrite php71`
+
+## Notes
+
+* LaTeX
+    * brew does not provide the simpler CLI tools like pdflatex - you have to get the whole MacTex cask, which is a 2GB install & a lot more than I currently want.
 
 # Inspirations
 

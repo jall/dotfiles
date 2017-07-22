@@ -17,6 +17,7 @@ apps=(
     yarn
     php71
     composer
+    leiningen
 )
 
 brew install "${apps[@]}"

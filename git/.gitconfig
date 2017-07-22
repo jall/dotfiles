@@ -15,5 +15,5 @@
 	nuke = !git reset --hard && git clean -df
 	undo = checkout HEAD --
 	unstage = reset HEAD --
-[includeIf "gitdir:~/Sites/"]
+[includeIf "gitdir:~/Work/"]
     path = ~/dotfiles/git/.gitconfig_work

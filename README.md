@@ -25,8 +25,6 @@ ${HOME}/dotfiles/install.sh
 
 * Only install checksummed tools through brew?
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
-* Comment EVERYTHING
-    * .inputrc
 * Harvest nice functions from people
     * https://github.com/mathiasbynens/dotfiles/blob/master/.functions
     * http://nparikh.org/notes/zshrc.txt

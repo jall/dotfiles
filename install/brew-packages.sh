@@ -37,6 +37,7 @@ casks=(
     gogland
     google-chrome
     iterm2
+    java
     phpstorm
     sequel-pro
     spotify

@@ -28,6 +28,7 @@ brew install "${packages[@]}"
 casks=(
     atom
     firefox
+    phpstorm
 )
 
 brew cask install "${casks[@]}"

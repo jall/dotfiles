@@ -17,32 +17,25 @@ ${HOME}/dotfiles/install.sh
 
 ## Install
 
-* Phpstorm
-* Atom
-* FileZilla
-* Chrome
-* FireFox
-* Spotify
-
-* vagrant
-* docker
-* Platform.sh
+* phpStorm/gogland plugins?
+* phpStorm/gogland settings?
+* LaTeX?
 
 ## Improvements
 
-* Make .gitconfig_work more general!
-* Pull grep options out into environment variable?
-* Clean out unused aliases
+* Only install checksummed tools through brew?
+* [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Comment EVERYTHING
     * .inputrc
 * Harvest nice functions from people
     * https://github.com/mathiasbynens/dotfiles/blob/master/.functions
     * http://nparikh.org/notes/zshrc.txt
 * Add some more terminal auto-completions?
-* Have a poke through /usr/local/bin for more things to load through package managers
 * Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
-* Stop script if things go wrong!
 * Add tests?
+* Add symlink overrides for certain brew bits?
+    * `brew link --overwrite python3`
+    * `brew link --overwrite php71`
 
 # Inspirations
 

@@ -26,6 +26,7 @@ brew install "${packages[@]}"
 
 # Now let's start the big stuff
 casks=(
+    atom
     firefox
 )
 

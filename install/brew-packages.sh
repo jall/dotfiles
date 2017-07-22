@@ -27,8 +27,14 @@ brew install "${packages[@]}"
 # Now let's start the big stuff
 casks=(
     atom
+    docker
     firefox
+    filezilla
+    gogland
+    google-chrome
+    iterm2
     phpstorm
+    sequel-pro
     spotify
 )
 

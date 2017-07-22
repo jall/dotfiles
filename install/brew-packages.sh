@@ -27,9 +27,12 @@ brew install "${packages[@]}"
 # Now let's start the big stuff
 casks=(
     atom
+    caffeine
     docker
+    dropbox
     firefox
     filezilla
+    flux
     gogland
     google-chrome
     iterm2

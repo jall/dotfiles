@@ -1,11 +1,8 @@
-# Set grep to colour matches.
-alias grep='grep --color=auto'
-
 # Improved ls commands.
 alias ls='ls -aG'
 alias ll='ls -ahlFG'
 
-# Git changes.
+# Git.
 alias s="git status --short --branch"
 alias d="git diff"
 alias dcd="git diff --cached"

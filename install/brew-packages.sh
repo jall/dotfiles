@@ -29,6 +29,7 @@ casks=(
     atom
     firefox
     phpstorm
+    spotify
 )
 
 brew cask install "${casks[@]}"

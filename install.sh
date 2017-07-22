@@ -26,6 +26,7 @@ source install/brew.sh
 source install/brew-packages.sh
 source install/composer.sh
 source install/yarn.sh
+source install/atom.sh
 
 # OSX system settings
 source osx/defaults.sh

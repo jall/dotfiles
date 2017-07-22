@@ -5,12 +5,14 @@ fi
 
 # Tap required formulae first
 brew tap homebrew/homebrew-php
+brew tap caskroom/cask
 
 # Make sure we're all up to date before starting
 brew update
 brew upgrade
 
-apps=(
+# 'Smaller' cli packages first
+packages=(
     git
     go
     hub
@@ -20,4 +22,11 @@ apps=(
     leiningen
 )
 
-brew install "${apps[@]}"
+brew install "${packages[@]}"
+
+# Now let's start the big stuff
+casks=(
+    firefox
+)
+
+brew cask install "${casks[@]}"

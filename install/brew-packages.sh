@@ -13,13 +13,14 @@ brew upgrade
 
 # 'Smaller' cli packages first
 packages=(
+    composer
     git
     go
     hub
-    yarn
-    php71
-    composer
     leiningen
+    php71
+    python3
+    yarn
 )
 
 brew install "${packages[@]}"

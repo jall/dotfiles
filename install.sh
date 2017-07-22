@@ -19,6 +19,7 @@ mkdir -p "${HOME}/Work/"
 # Symlink dotfiles
 ln -sv "${DOTFILES_DIR}/system/.bash_profile" "${HOME}"
 ln -sv "${DOTFILES_DIR}/system/.inputrc" "${HOME}"
+ln -sv "${DOTFILES_DIR}/system/.editorconfig" "${HOME}"
 ln -sv "${DOTFILES_DIR}/git/.gitconfig" "${HOME}"
 ln -sv "${DOTFILES_DIR}/git/.gitignore_global" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"

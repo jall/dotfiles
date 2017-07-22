@@ -9,8 +9,8 @@ If you want to copy it, feel free!
 # Usage
 
 ```
-git clone https://github.com/jall/dotfiles.git "${HOME}/dotfiles"
-${HOME}/dotfiles/install.sh
+git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
+${HOME}/.dotfiles/install.sh
 ```
 
 # Todo
@@ -22,6 +22,8 @@ ${HOME}/dotfiles/install.sh
 
 ## Improvements
 
+* Add '--force' option to install to overwrite symlinks, force update everything if possible?
+    * Probably a bit dangerous for some tools - use with care
 * Only install checksummed tools through brew?
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice functions from people

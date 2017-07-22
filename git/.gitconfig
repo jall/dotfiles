@@ -16,4 +16,4 @@
 	undo = checkout HEAD --
 	unstage = reset HEAD --
 [includeIf "gitdir:~/Work/"]
-    path = ~/dotfiles/git/.gitconfig_work
+    path = ~/.dotfiles/git/.gitconfig_work

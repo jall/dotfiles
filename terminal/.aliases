@@ -11,16 +11,5 @@ alias log="git log --oneline"
 # Python.
 alias py='python3'
 
-# Vagrant.
-alias v='vagrant version && vagrant global-status'
-alias vs='vagrant status'
-alias vup='vagrant up'
-alias vdo='vagrant halt'
-alias vssh='vagrant ssh'
-alias vkill='vagrant destroy'
-
-# Drush.
-alias ddd="drush dl $1 --destination='sites/all/modules/dev'"
-
 # Symfony.
 alias sym="app/console"

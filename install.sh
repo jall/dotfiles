@@ -19,6 +19,13 @@ ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"
 mkdir -p "${HOME}/.vim/"
 ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
 
+# Prompt to install Xcode through App Store if it doesn't already exist.
+# There is no way I could find of installing Xcode through the CLI.
+# This does not block the rest of the script.
+if ! open -Ra "Xcode"; then
+  xcode-select --install
+fi
+
 # Homebrew first for OSX dependencies
 source install/brew.sh
 

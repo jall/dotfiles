@@ -39,6 +39,8 @@ casks=(
     phpstorm
     sequel-pro
     spotify
+    vagrant
+    virtualbox
 )
 
 brew cask install "${casks[@]}"

@@ -15,10 +15,7 @@ ${HOME}/.dotfiles/install.sh
 
 # Todo
 
-## Install
-
-* phpStorm/gogland plugins?
-* phpStorm/gogland settings?
+* Atom config?
 
 ## Improvements
 
@@ -38,6 +35,9 @@ ${HOME}/.dotfiles/install.sh
 
 ## Notes
 
+* Jetbrains IDEs
+    * Settings are contained as `settings.jar` file & aren't very nice to VC.
+    * No cli I can find, so settings must be imported by hand once the IDEs are installed.
 * LaTeX
     * brew does not provide the simpler CLI tools like pdflatex - you have to get the whole MacTex cask, which is a 2GB install & a lot more than I currently want.
 

@@ -13,8 +13,10 @@
 	rebase = true
 [alias]
 	alias = config --get-regexp ^alias\\.
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
 	last = log -1 HEAD
 	nuke = !git reset --hard && git clean -df
+	prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
 	undo = checkout HEAD --
 	unstage = reset HEAD --
 [includeIf "gitdir:~/Work/"]

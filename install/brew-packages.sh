@@ -36,6 +36,7 @@ casks=(
     flux
     gogland
     google-chrome
+    intellij-idea-ce
     iterm2
     java
     phpstorm

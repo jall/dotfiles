@@ -15,8 +15,8 @@
 	alias = config --get-regexp ^alias\\.
 	amend = commit --amend
 	br = branch
-	ci = commit -v
-	co = checkout
+	co = commit -v
+	ch = checkout
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
 	last = log -1 HEAD
 	nuke = !git reset --hard && git clean -df

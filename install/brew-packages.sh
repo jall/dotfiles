@@ -41,6 +41,7 @@ casks=(
     java
     phpstorm
     sequel-pro
+    slack
     spotify
     vagrant
     virtualbox

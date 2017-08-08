@@ -1,6 +1,6 @@
 {
     "require": {
-        "drush/drush": "^8.1",
+        "drush/drush": "8.1.12",
         "squizlabs/php_codesniffer": "^3.0",
         "drupal/coder": "^8.2",
         "phpunit/phpunit": "~5.6",

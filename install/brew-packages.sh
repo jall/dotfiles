@@ -19,6 +19,7 @@ packages=(
     hub
     leiningen
     php71
+    pre-commit
     python3
     yarn
 )

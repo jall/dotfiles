@@ -11,6 +11,7 @@ if is-executable git -a -d "${DOTFILES_DIR}/.git"; then git --work-tree="$DOTFIL
 
 # Ensure required directories exist before copying into them
 mkdir -p "${HOME}/.vim/"
+mkdir -p "${HOME}/.lein/"
 mkdir -p "${HOME}/bin/"
 mkdir -p "${HOME}/Personal/"
 mkdir -p "${HOME}/Personal/go"
@@ -24,6 +25,7 @@ ln -sv "${DOTFILES_DIR}/git/.gitconfig" "${HOME}"
 ln -sv "${DOTFILES_DIR}/git/.gitignore_global" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
+ln -sv "${DOTFILES_DIR}/lein/profile.clj" "${HOME}/.lein"
 
 # Prompt to install Xcode through App Store if it doesn't already exist.
 # There is no way I could find of installing Xcode through the CLI.

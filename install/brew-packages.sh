@@ -44,6 +44,7 @@ casks=(
     sequel-pro
     slack
     spotify
+    sublime-text
     vagrant
     virtualbox
 )

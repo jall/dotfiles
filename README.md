@@ -21,7 +21,6 @@ ${HOME}/.dotfiles/install.sh
 
 * Add '--force' option to install to overwrite symlinks, force update everything if possible?
     * Probably a bit dangerous for some tools - use with care
-* Only install checksummed tools through brew?
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice functions from people
     * https://github.com/mathiasbynens/dotfiles/blob/master/.functions

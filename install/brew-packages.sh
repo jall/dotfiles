@@ -48,4 +48,4 @@ casks=(
     virtualbox
 )
 
-brew cask install "${casks[@]}"
+brew cask install --require-sha "${casks[@]}"

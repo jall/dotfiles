@@ -15,7 +15,7 @@ ${HOME}/.dotfiles/install.sh
 
 # Todo
 
-* Atom config?
+* Remove Atom in favour of Sublime
 
 ## Improvements
 

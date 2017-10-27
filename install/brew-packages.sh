@@ -37,10 +37,12 @@ casks=(
     flux
     gogland
     google-chrome
+    hipchat
     intellij-idea-ce
     iterm2
     java
     phpstorm
+    postman
     sequel-pro
     slack
     spotify

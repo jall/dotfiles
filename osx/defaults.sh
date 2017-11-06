@@ -9,6 +9,9 @@ sudo nvram SystemAudioVolume=" "
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
+# The 'open' dialog from other programs isn't covered by the
+# above, so this global change is needed.
+defaults write -g AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

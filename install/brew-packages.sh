@@ -43,6 +43,7 @@ casks=(
     java
     phpstorm
     postman
+    sensiblesidebuttons
     sequel-pro
     slack
     spotify

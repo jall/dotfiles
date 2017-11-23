@@ -12,6 +12,7 @@ if is-executable git -a -d "${DOTFILES_DIR}/.git"; then git --work-tree="$DOTFIL
 # Ensure required directories exist before copying into them
 mkdir -p "${HOME}/.vim/"
 mkdir -p "${HOME}/.lein/"
+mkdir -p "${HOME}/.gnupg/"
 mkdir -p "${HOME}/bin/"
 mkdir -p "${HOME}/Personal/"
 mkdir -p "${HOME}/Personal/go"
@@ -26,6 +27,7 @@ ln -sv "${DOTFILES_DIR}/git/.gitignore_global" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
 ln -sv "${DOTFILES_DIR}/lein/profiles.clj" "${HOME}/.lein"
+ln -sv "${DOTFILES_DIR}/gpg/gpg-agent.conf" "${HOME}/.gnupg"
 ln -sv "${DOTFILES_DIR}/sublime-text/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
 
 # Prompt to install Xcode through App Store if it doesn't already exist.

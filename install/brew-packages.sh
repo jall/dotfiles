@@ -16,9 +16,11 @@ packages=(
     composer
     git
     go
+    gpg
     hub
     leiningen
     php71
+    pinentry-mac
     pre-commit
     python3
     yarn

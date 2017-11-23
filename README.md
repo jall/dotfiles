@@ -13,6 +13,10 @@ git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
 ${HOME}/.dotfiles/install.sh
 ```
 
+## Git
+
+My git setup accepts an (optional) `~/.gitconfig_local` file which can be used for machine specific overrides. This is generally used to swap out the email for a work one, or adding a specific GPG signing key to use.
+
 # Todo
 
 * Remove Atom in favour of Sublime

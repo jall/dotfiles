@@ -24,5 +24,5 @@
 	prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
 	undo = checkout HEAD --
 	unstage = reset HEAD --
-[includeIf "gitdir:~/Work/"]
-    path = ~/.gitconfig_work
+[include]
+	path = ~/.gitconfig_local

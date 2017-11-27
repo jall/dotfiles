@@ -6,7 +6,11 @@ alias ll='ls -ahlFG'
 alias s="git status --short --branch"
 alias d="git diff"
 alias dcd="git diff --cached"
+# See full formatting options: https://git-scm.com/docs/git-log
+# And useful SO answer: https://stackoverflow.com/a/9463536
 alias log="git log --oneline"
+# With GPG signature and date (but loses some styles for the branches/tags)
+# alias log="git log --pretty='format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(15,trunc)%ar %C(auto,red)%d %C(auto,reset)%s'"
 
 # Python.
 alias py='python3'

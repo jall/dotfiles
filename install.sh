@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Prompt to install Xcode through App Store if it doesn't already exist.
+# There is no way I could find of installing Xcode through the CLI.
+# This does not block the rest of the script.
+if ! open -Ra "Xcode"; then
+  xcode-select --install
+fi
+
 # Get current directory
 export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -30,13 +37,6 @@ ln -sv "${DOTFILES_DIR}/lein/profiles.clj" "${HOME}/.lein"
 ln -sv "${DOTFILES_DIR}/gpg/gpg-agent.conf" "${HOME}/.gnupg"
 ln -sv "${DOTFILES_DIR}/sublime-text/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
 
-# Prompt to install Xcode through App Store if it doesn't already exist.
-# There is no way I could find of installing Xcode through the CLI.
-# This does not block the rest of the script.
-if ! open -Ra "Xcode"; then
-  xcode-select --install
-fi
-
 # Homebrew first for OSX dependencies
 source install/brew.sh
 
@@ -46,6 +46,7 @@ source install/composer.sh
 source install/yarn.sh
 source install/atom.sh
 source install/platform.sh
+source install/gpg.sh
 
 # OSX system settings
 source osx/defaults.sh

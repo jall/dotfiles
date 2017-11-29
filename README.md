@@ -43,15 +43,13 @@ After this, add the new key id to local git config (`~/.gitconfig_local`) to ena
 
 ```
 
-Then [upload the public key to Github](https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account) so commits are verified as coming from me. **This only works if email in key and Github profile match.**
+Then [upload the public key to Github](https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account) so commits are verified as coming from me. **This only works if the email in the GPG key and Github profile match.**
 
 For automatic signing, the `pinentry-mac` program can be used. This will pop up when GPG asks for the key passphrase (e.g. when signing a commit), and the passphrase can then be stored in the OSX keychain so it's automatically used from that point on when signed in.
 
 # Todo
 
 * Remove Atom in favour of Sublime
-* Prompt to generate new GPG key if none exists on install
-    * Then add to local git config
 
 ## Improvements
 

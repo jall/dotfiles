@@ -9,7 +9,6 @@ brew tap caskroom/cask
 
 # Make sure we're all up to date before starting
 brew update
-brew upgrade
 
 # 'Smaller' cli packages first
 packages=(

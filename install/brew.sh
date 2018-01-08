@@ -3,10 +3,10 @@ if ! is-executable ruby -o ! is-executable curl -o ! is-executable git; then
   return
 fi
 
-if is-executable brew; then
-  echo "Already installed: Homebrew"
-  return
+if ! is-executable brew; then
+    # Install script as recommended by https://brew.sh
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Install script as recommended by https://brew.sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew bundle

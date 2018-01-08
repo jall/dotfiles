@@ -40,8 +40,7 @@ ln -sv "${DOTFILES_DIR}/sublime-text/Preferences.sublime-settings" "${HOME}/Libr
 # Homebrew first for OSX dependencies
 source install/brew.sh
 
-# And now most big dependencies through brew, then language specific package managers
-source install/brew-packages.sh
+# And now language specific package managers
 source install/composer.sh
 source install/yarn.sh
 source install/atom.sh
@@ -49,4 +48,5 @@ source install/platform.sh
 source install/gpg.sh
 
 # OSX system settings
+echo "Updating OSX system defaults, you will be prompted for a password shortly"
 source osx/defaults.sh

@@ -59,6 +59,7 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * Harvest nice bits from people
     * https://github.com/mattbrictson/dotfiles
 * Add some more terminal auto-completions?
+    * bash-completion
 * Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
 * Add tests?
 * Add symlink overrides for certain brew bits?
@@ -66,9 +67,9 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
     * `brew link --overwrite php71`
 * Add .extra file for machine specific overrides, as per [jessfraz](https://github.com/jessfraz/dotfiles).
 * Sublime Text 3 packages
-* [Brewfile](https://github.com/Homebrew/homebrew-bundle) rather than shell script
 * Check out [mas](https://github.com/mas-cli/mas) for Mac App Store dependencies.
-* Update php to 7.2?
+* Update php to 7.2
+* Use make instead of install.sh
 
 
 ## Notes

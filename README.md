@@ -56,9 +56,8 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * Add '--force' option to install to overwrite symlinks, force update everything if possible?
     * Probably a bit dangerous for some tools - use with care
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
-* Harvest nice functions from people
-    * https://github.com/mathiasbynens/dotfiles/blob/master/.functions
-    * http://nparikh.org/notes/zshrc.txt
+* Harvest nice bits from people
+    * https://github.com/mattbrictson/dotfiles
 * Add some more terminal auto-completions?
 * Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
 * Add tests?
@@ -66,6 +65,11 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
     * `brew link --overwrite python3`
     * `brew link --overwrite php71`
 * Add .extra file for machine specific overrides, as per [jessfraz](https://github.com/jessfraz/dotfiles).
+* Sublime Text 3 packages
+* [Brewfile](https://github.com/Homebrew/homebrew-bundle) rather than shell script
+* Check out [mas](https://github.com/mas-cli/mas) for Mac App Store dependencies.
+* Update php to 7.2?
+
 
 ## Notes
 

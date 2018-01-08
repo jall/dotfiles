@@ -63,10 +63,8 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
 * Add tests?
 * Add symlink overrides for certain brew bits?
+    * Probably better to override via $PATH
     * `brew link --overwrite python3`
-    * `brew link --overwrite php71`
-* Add .extra file for machine specific overrides, as per [jessfraz](https://github.com/jessfraz/dotfiles).
-* Update php to 7.2
 * Use make instead of install.sh
 
 

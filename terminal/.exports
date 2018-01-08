@@ -1,0 +1,16 @@
+# Add timestamps to command history
+export HISTTIMEFORMAT="%F %T "
+
+# Add some colour to grep by default
+export GREP_OPTIONS='--color=auto'
+
+# Behat needs this to debug.
+export XDEBUG_CONFIG="idekey=PHPSTORM"
+
+# Platform.sh CLI
+source "${HOME}/.platformsh/platform.rc" 2>/dev/null
+
+export GOPATH="${HOME}/Personal/go"
+
+# GPG requires this to prompt for signing correctly, e.g. when signing git commits
+export GPG_TTY=$(tty)

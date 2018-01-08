@@ -45,7 +45,6 @@ source install/brew.sh
 # And now language specific package managers
 source install/composer.sh
 source install/yarn.sh
-source install/atom.sh
 source install/platform.sh
 
 # Set up initial GPG key if one doesn't exist

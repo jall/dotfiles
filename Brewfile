@@ -22,7 +22,6 @@ brew "yarn"
 brew "homebrew/php/composer"
 brew "homebrew/php/php72"
 
-cask "atom"
 cask "caffeine"
 cask "docker"
 cask "dropbox"

@@ -54,6 +54,7 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice bits from people
     * https://github.com/mattbrictson/dotfiles
+    * https://github.com/jessfraz/dotfiles
 * Add some more terminal auto-completions?
     * bash-completion
 * Add tests?

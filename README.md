@@ -66,8 +66,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
     * `brew link --overwrite python3`
     * `brew link --overwrite php71`
 * Add .extra file for machine specific overrides, as per [jessfraz](https://github.com/jessfraz/dotfiles).
-* Sublime Text 3 packages
-* Check out [mas](https://github.com/mas-cli/mas) for Mac App Store dependencies.
 * Update php to 7.2
 * Use make instead of install.sh
 

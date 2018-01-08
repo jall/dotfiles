@@ -35,7 +35,9 @@ ln -sv "${DOTFILES_DIR}/vim/.vimrc" "${HOME}"
 ln -sv "${DOTFILES_DIR}/vim/colors/" "${HOME}/.vim"
 ln -sv "${DOTFILES_DIR}/lein/profiles.clj" "${HOME}/.lein"
 ln -sv "${DOTFILES_DIR}/gpg/gpg-agent.conf" "${HOME}/.gnupg"
-ln -sv "${DOTFILES_DIR}/sublime-text/Preferences.sublime-settings" "${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
+SUBLIME_USER_DIR="${HOME}/Library/Application Support/Sublime Text 3/Packages/User"
+ln -sv "${DOTFILES_DIR}/sublime-text/Preferences.sublime-settings" "${SUBLIME_USER_DIR}"
+ln -sv "${DOTFILES_DIR}/sublime-text/Package Control.sublime-settings" "${SUBLIME_USER_DIR}"
 
 # Homebrew first for OSX dependencies
 source install/brew.sh
@@ -45,6 +47,8 @@ source install/composer.sh
 source install/yarn.sh
 source install/atom.sh
 source install/platform.sh
+
+# Set up initial GPG key if one doesn't exist
 source install/gpg.sh
 
 # OSX system settings

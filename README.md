@@ -65,6 +65,7 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * Add symlink overrides for certain brew bits?
     * `brew link --overwrite python3`
     * `brew link --overwrite php71`
+* Add .extra file for machine specific overrides, as per [jessfraz](https://github.com/jessfraz/dotfiles).
 
 ## Notes
 

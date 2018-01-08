@@ -20,7 +20,7 @@ brew "sqlite"
 # Yarn includes node by default
 brew "yarn"
 brew "homebrew/php/composer"
-brew "homebrew/php/php71"
+brew "homebrew/php/php72"
 
 cask "atom"
 cask "caffeine"

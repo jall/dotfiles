@@ -12,5 +12,10 @@ do
 done
 unset DOTFILE
 
+# This one allows for machine specific/temporary overides.
+if [ -f ~/.extra ]; then
+    source ~/.extra
+fi
+
 # Add git completion
 source "${DOTFILES}/git/git-completion.bash"

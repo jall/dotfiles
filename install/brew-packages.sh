@@ -22,6 +22,7 @@ packages=(
     pinentry-mac
     pre-commit
     python3
+    shellcheck
     yarn
 )
 

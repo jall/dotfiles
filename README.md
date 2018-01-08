@@ -49,22 +49,14 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 # Todo
 
-* Remove Atom in favour of Sublime
-
 ## Improvements
 
-* Add '--force' option to install to overwrite symlinks, force update everything if possible?
-    * Probably a bit dangerous for some tools - use with care
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice bits from people
     * https://github.com/mattbrictson/dotfiles
 * Add some more terminal auto-completions?
     * bash-completion
-* Update $PATH to use brew php version by default, then allow overriding with others (like MAMP PRO) if needed
 * Add tests?
-* Add symlink overrides for certain brew bits?
-    * Probably better to override via $PATH
-    * `brew link --overwrite python3`
 * Use make instead of install.sh
 
 

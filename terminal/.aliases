@@ -2,6 +2,11 @@
 alias ls='ls -aG'
 alias ll='ls -ahlFG'
 
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 # Git.
 alias s="git status --short --branch"
 alias d="git diff"

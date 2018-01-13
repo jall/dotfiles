@@ -1,9 +1,13 @@
-.PHONY: all symlinks brew brew_bundle composer yarn platform osx gpg
+.PHONY: all symlinks brew brew_bundle composer yarn platform osx gpg_key ssh_key
 
 all: symlinks brew_bundle composer yarn osx
+# We only run GPG key gen on install if one doesn't exist yet.
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
-	# We only run GPG key gen on install if one doesn't exist yet.
-	$(MAKE) gpg
+	$(MAKE) gpg_key
+endif
+
+ifeq ('', $(shell find ${HOME}/.ssh -iname "*.pub"))
+	$(MAKE) ssh_key
 endif
 
 SUBLIME_USER_DIR := ${HOME}/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
@@ -95,8 +99,8 @@ osx:
 	# Disable the sound effects on boot (requires sudo)
 	@sudo nvram SystemAudioVolume=" "
 
-gpg:
-	# Prompt for key generation
+gpg_key:
+	# Prompt for GPG key generation
 	gpg --full-generate-key --expert
 
 	@echo "Please restart your computer to enable pinentry-mac."
@@ -111,3 +115,9 @@ gpg:
 	@echo "You may also want to add your GPG key to Github."
 	@echo 'You can view instructions on how to do this here:'
 	@echo 'https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account'
+
+# I'm going with the modern ed25519 for the moment, and supplementing it
+# with an older RSA key if my workflow turns out to need it.
+ssh_key:
+	# Prompt for ssh key generation
+	ssh-keygen -t ed25519

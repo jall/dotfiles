@@ -1,7 +1,7 @@
 .PHONY: all symlinks brew brew_bundle composer yarn platform osx gpg
 
 all: symlinks brew_bundle composer yarn osx
-ifeq ('',$(gpg --list-secret-keys | grep sec))
+ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	# We only run GPG key gen on install if one doesn't exist yet.
 	$(MAKE) gpg
 endif

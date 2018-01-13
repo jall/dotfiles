@@ -8,9 +8,15 @@ If you want to copy it, feel free!
 
 # Usage
 
+First install Xcode to get git and some basic bits
+```
+xcode-select --install
+```
+Then pull this repo and run make.
 ```
 git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
-${HOME}/.dotfiles/install.sh
+${HOME}/.dotfiles
+make
 ```
 
 ## Git
@@ -28,9 +34,9 @@ will override the email my commits are signed with on this machine.
 
 If no GPG key exists on this machine, generate a new one.
 ```
-gpg --full-generate-key
+make gpg
 ```
-Follow the [Github instructions](https://help.github.com/articles/generating-a-new-gpg-key) what details to enter.
+[Github has good instructions](https://help.github.com/articles/generating-a-new-gpg-key) on what details to enter. For key type, RSA is standard & works everywhere, but ECDSA is stronger/more future proof (probably want Curve 25519 or NIST P-521).
 
 **Make sure to store the passphrase in keychain/a password manager.**
 
@@ -58,7 +64,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 * Add some more terminal auto-completions?
     * bash-completion
 * Add tests?
-* Use make instead of install.sh
 
 
 ## Notes

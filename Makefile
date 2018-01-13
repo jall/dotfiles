@@ -1,6 +1,10 @@
-.PHONY: all symlinks brew brew_bundle composer yarn platform osx
+.PHONY: all symlinks brew brew_bundle composer yarn platform osx gpg
 
 all: symlinks brew_bundle composer yarn osx
+ifeq ('',$(gpg --list-secret-keys | grep sec))
+	# We only run GPG key gen on install if one doesn't exist yet.
+	$(MAKE) gpg
+endif
 
 SUBLIME_USER_DIR := ${HOME}/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 symlinks:
@@ -90,3 +94,20 @@ osx:
 
 	# Disable the sound effects on boot (requires sudo)
 	@sudo nvram SystemAudioVolume=" "
+
+gpg:
+	# Prompt for key generation
+	gpg --full-generate-key --expert
+
+	@echo "Please restart your computer to enable pinentry-mac."
+	@echo "Once active, pinentry-mac will prompt for your key's"
+	@echo "passphrase the next time you attempt to sign with it.";
+	@echo "Choose 'Save to Keychain' to store your passphrase in OSX's Keychain."
+	@echo "This allows automatic signing without prompting for the passphrase continually.";
+	@echo "";
+	@echo "You may also want to add your key to your local git config (~/.gitconfig_local).";
+	@echo "This allows for automatic GPG signing of every commit/tag you make.";
+	@echo "";
+	@echo "You may also want to add your GPG key to Github."
+	@echo 'You can view instructions on how to do this here:'
+	@echo 'https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account'

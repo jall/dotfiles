@@ -34,9 +34,9 @@ will override the email my commits are signed with on this machine.
 
 If no GPG key exists on this machine, generate a new one.
 ```
-make gpg
+make gpg_key
 ```
-[Github has good instructions](https://help.github.com/articles/generating-a-new-gpg-key) on what details to enter. For key type, RSA is standard & works everywhere, but ECDSA is stronger/more future proof (probably want Curve 25519 or NIST P-521).
+[Github has good instructions](https://help.github.com/articles/generating-a-new-gpg-key) on what details to enter. For key type, RSA is standard & works everywhere, but elliptic curves are potentially stronger/faster/more future proof (probably want Curve 25519 or NIST P-521).
 
 **Make sure to store the passphrase in keychain/a password manager.**
 

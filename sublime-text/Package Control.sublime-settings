@@ -2,13 +2,14 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"SublimeLinter-contrib-eslint"
 	],
 	"installed_packages":
 	[
 		"GitGutter",
 		"Package Control",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
-		"SublimeLinter-shellcheck"
+		"SublimeLinter-shellcheck",
+		"SublimeLinter-eslint"
 	]
 }

@@ -12,10 +12,10 @@ do
 done
 unset DOTFILE
 
+# Set up bash completion.
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 # This one allows for machine specific/temporary overides.
 if [ -f ~/.extra ]; then
     source ~/.extra
 fi
-
-# Add git completion
-source "${DOTFILES}/git/git-completion.bash"

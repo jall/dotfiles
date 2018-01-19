@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "caskroom/versions"
 tap "caskroom/cask"
 
+brew "bash-completion"
 brew "cocoapods"
 brew "git"
 brew "gpg"

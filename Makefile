@@ -52,7 +52,7 @@ brew_bundle: brew
 	brew update
 	brew bundle
 
-composer: brew_bundle
+composer: brew_bundle symlinks
 	composer global install
 
 yarn: brew_bundle

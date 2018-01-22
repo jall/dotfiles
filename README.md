@@ -2,7 +2,7 @@
 
 My personal dotfiles repo.
 
-The setup is currently mostly for OSX, although many tools/config files are environment agnostic.
+The setup is for OSX, although many tools/config files are environment agnostic.
 
 If you want to copy it, feel free!
 
@@ -15,7 +15,7 @@ xcode-select --install
 Then pull this repo and run make.
 ```
 git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
-${HOME}/.dotfiles
+cd ${HOME}/.dotfiles
 make
 ```
 
@@ -55,18 +55,14 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 # Todo
 
-## Improvements
-
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice bits from people
     * https://github.com/mattbrictson/dotfiles
     * https://github.com/jessfraz/dotfiles
-* Add some more terminal auto-completions?
-    * bash-completion
-* Add tests?
+* Tests
 
 
-## Notes
+# Notes
 
 * Jetbrains IDEs
     * Settings are contained as `settings.jar` file & aren't very nice to VC.

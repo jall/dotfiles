@@ -16,3 +16,8 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 # Go
 export PATH="$PATH:$(go env GOPATH)/bin"
 
+# Base directories for `cd`
+if test “${PS1+set}”; then
+	export CDPATH="${CDPATH}:${HOME}/Work";
+fi
+

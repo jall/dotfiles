@@ -10,3 +10,5 @@ Thumbs.db
 # IDE
 .idea
 .vscode
+*.code-workspace
+

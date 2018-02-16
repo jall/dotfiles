@@ -55,12 +55,33 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 # Todo
 
+## Bugs
+
+* Fix Sublime text 3 symlinks (crashes due to missing dir)
+* .composer folder in ~ is created as symlink, not folder?
+
+## Improvements
+
 * [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
 * Harvest nice bits from people
     * https://github.com/mattbrictson/dotfiles
     * https://github.com/jessfraz/dotfiles
 * Tests
-
+* Iterm2 settings/colours/keymap
+* Typescript/ts-node
+* vscode
+* Add OSX defaults
+	* Desktop view 'snap to grid'
+	* Dock on the right
+		* Dock on the top right? Old blogs suggesting CLI changes possible but didn't work on High Sierra
+	* Login items (will brew services do this?)
+		* Docker for Mac
+		* Slack
+		* SensibleSideButtons
+    * Configure trackpad settings - disable 'natural' scroll
+* react-native bits
+* Android build tools
+* Add `GH_TOKEN` notes, or add generator to Makefile
 
 # Notes
 

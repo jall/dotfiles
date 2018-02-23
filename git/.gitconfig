@@ -24,6 +24,6 @@
 	prune-local = !git branch --merged | tr -d \"*\" | grep -v \"dev\\|develop\\|staging\\|production\\|master\" | xargs -n1 git branch -d
 	undo = checkout HEAD --
 	unstage = reset HEAD --
-	sp = !git stash && git pull --rebase && git stash pop
+	sp = !git stash -u && git pull --rebase && git stash pop
 [include]
 	path = ~/.gitconfig_local

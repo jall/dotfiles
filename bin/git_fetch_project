@@ -1,0 +1,26 @@
+#! /usr/bin/env bash
+
+[ $# = 0 ] && echo "Please specify a project dir" >&2 && exit 1
+
+echo_cmd="echo -e"
+type gecho >/dev/null 2>/dev/null && echo_cmd=gecho
+
+color_reset="\e[0m"
+color_bad="\e[31m"
+color_good="\e[32m"
+
+proj=${1%/}
+
+if [ -d "$proj/.git" ] && grep -q '\[remote ' "$proj/.git/config"; then
+  if cd "$proj" && git fetch --quiet; then
+    commits_behind=$(git rev-list --count HEAD..@{upstream} 2>/dev/null)
+    padded_commits_behind=$(printf '%3s' "$commits_behind")
+    color=$color_bad
+    if [[ "$commits_behind" -gt 0 ]]; then
+    git merge --ff-only --quiet @{upstream} && color=$color_good
+    $echo_cmd -e "${color}${padded_commits_behind}${color_reset} $(basename "$proj")"
+    fi
+  else
+    $echo_cmd -e "${color_bad}  !${color_reset} $(basename "$proj")"
+  fi
+fi

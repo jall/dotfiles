@@ -44,3 +44,17 @@ data-url() {
   fi
   echo "data:${MIMETYPE};base64,$(openssl base64 -in "$1" | tr -d '\n')"
 }
+
+# Tries to fast forward pull every git repo in the provided/current directory.
+pull-all() {
+  local dir=${1:-$(pwd)}
+  dir=${dir%/}
+
+  echo "$dir"/*/.git | \
+    sed 's:\/.git::g' | \
+    tr ' ' '\n' | \
+    xargs -n1 git_fetch_project
+
+  echo "Last fetch: $(cat ~/.config/me/pull-all-last-fetch-date 2>/dev/null)"
+  echo "Fetched at: $(date | tee ~/.config/me/pull-all-last-fetch-date)"
+}

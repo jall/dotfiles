@@ -1,5 +1,5 @@
 # Personal crud
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${HOME}/.dotfiles/bin:${PATH}"
 
 # Composer
 export PATH="${HOME}/.composer/vendor/bin:${PATH}"

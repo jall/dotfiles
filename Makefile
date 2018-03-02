@@ -16,6 +16,7 @@ symlinks:
 	mkdir -p ${HOME}/.vim/
 	mkdir -p ${HOME}/.lein/
 	mkdir -p ${HOME}/.gnupg/
+	mkdir -p ${HOME}/.config/me
 	mkdir -p ${HOME}/bin/
 	mkdir -p ${HOME}/Personal/
 	mkdir -p ${HOME}/Personal/go

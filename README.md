@@ -79,6 +79,11 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 		* Slack
 		* SensibleSideButtons
     * Configure trackpad settings - disable 'natural' scroll
+    * Set default login shell to `/usr/local/bin/bash` to use updated Brew bash instead of OSX bundled one; see [this answer](https://superuser.com/a/48241)
+      May want something like this too if it needs to be in the list of allowed shells
+      ```
+      grep -q -F '/usr/local/bin/bash' /etc/shells || sudo echo '/usr/local/bin/bash' >> /etc/shells
+      ```
 * react-native bits
 * Android build tools
 * Add `GH_TOKEN` notes, or add generator to Makefile

@@ -6,9 +6,10 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"GraphQL",
 		"Package Control",
 		"SublimeLinter",
-		"SublimeLinter-shellcheck",
-		"SublimeLinter-eslint"
+		"SublimeLinter-eslint",
+		"SublimeLinter-shellcheck"
 	]
 }

@@ -19,3 +19,5 @@ unset DOTFILE
 if [ -f ~/.extra ]; then
     source ~/.extra
 fi
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

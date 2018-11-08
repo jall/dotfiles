@@ -9,10 +9,13 @@ If you want to copy it, feel free!
 # Usage
 
 First install Xcode to get git and some basic bits
+
 ```
 xcode-select --install
 ```
+
 Then pull this repo and run make.
+
 ```
 git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
 cd ${HOME}/.dotfiles
@@ -24,23 +27,28 @@ make
 My git setup accepts an (optional) `~/.gitconfig_local` file which can be used for machine specific overrides. This is generally used to swap out the email for a work one, or adding a specific GPG signing key to use.
 
 E.g. adding
+
 ```
 [user]
     email = jon@currentemployer.com
 ```
+
 will override the email my commits are signed with on this machine.
 
 ## GPG
 
 If no GPG key exists on this machine, generate a new one.
+
 ```
 make gpg_key
 ```
+
 [Github has good instructions](https://help.github.com/articles/generating-a-new-gpg-key) on what details to enter. For key type, RSA is standard & works everywhere, but elliptic curves are potentially stronger/faster/more future proof (probably want Curve 25519 or NIST P-521).
 
 **Make sure to store the passphrase in keychain/a password manager.**
 
 After this, add the new key id to local git config (`~/.gitconfig_local`) to enable automatic commit/tag signing with these parameters:
+
 ```
 [user]
     signingkey = MY_KEY_ID
@@ -55,48 +63,51 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 # Todo
 
+- Add `jq` as dep
+- Go through Candide bits and include generic niceties for future use
+- Swap from `yarn` to `npm`?
+
 ## Bugs
 
-* Fix Sublime text 3 symlinks (crashes due to missing dir)
-* .composer folder in ~ is created as symlink, not folder?
+- Fix Sublime text 3 symlinks (crashes due to missing dir)
+- .composer folder in ~ is created as symlink, not folder?
 
 ## Improvements
 
-* [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
-* Harvest nice bits from people
-    * https://github.com/mattbrictson/dotfiles
-    * https://github.com/jessfraz/dotfiles
-* Tests
-* Iterm2 settings/colours/keymap
-* Typescript/ts-node
-* vscode
-* Add OSX defaults
-	* Desktop view 'snap to grid'
-	* Dock on the right
-		* Dock on the top right? Old blogs suggesting CLI changes possible but didn't work on High Sierra
-	* Login items (will brew services do this?)
-		* Docker for Mac
-		* Slack
-		* SensibleSideButtons
-    * Configure trackpad settings - disable 'natural' scroll
-    * Set default login shell to `/usr/local/bin/bash` to use updated Brew bash instead of OSX bundled one; see [this answer](https://superuser.com/a/48241)
-      May want something like this too if it needs to be in the list of allowed shells
-      ```
-      grep -q -F '/usr/local/bin/bash' /etc/shells || sudo echo '/usr/local/bin/bash' >> /etc/shells
-      ```
-* react-native bits
-* Android build tools
-* Add `GH_TOKEN` notes, or add generator to Makefile
+- [brew services](https://github.com/Homebrew/homebrew-services) - automatically start things on login!
+- Harvest nice bits from people
+  - https://github.com/mattbrictson/dotfiles
+  - https://github.com/jessfraz/dotfiles
+- Tests
+- Iterm2 settings/colours/keymap
+- Typescript/ts-node
+- vscode
+- Add OSX defaults
+  _ Desktop view 'snap to grid'
+  _ Dock on the right
+  _ Dock on the top right? Old blogs suggesting CLI changes possible but didn't work on High Sierra
+  _ Login items (will brew services do this?)
+  _ Docker for Mac
+  _ Slack \* SensibleSideButtons
+  - Configure trackpad settings - disable 'natural' scroll
+  - Set default login shell to `/usr/local/bin/bash` to use updated Brew bash instead of OSX bundled one; see [this answer](https://superuser.com/a/48241)
+    May want something like this too if it needs to be in the list of allowed shells
+    ```
+    grep -q -F '/usr/local/bin/bash' /etc/shells || sudo echo '/usr/local/bin/bash' >> /etc/shells
+    ```
+- react-native bits
+- Android build tools
+- Add `GH_TOKEN` notes, or add generator to Makefile
 
 # Notes
 
-* Jetbrains IDEs
-    * Settings are contained as `settings.jar` file & aren't very nice to VC.
-    * No cli I can find, so settings must be imported by hand once the IDEs are installed.
-* LaTeX
-    * brew does not provide the simpler CLI tools like pdflatex - you have to get the whole MacTex cask, which is a 2GB install & a lot more than I currently want.
+- Jetbrains IDEs
+  - Settings are contained as `settings.jar` file & aren't very nice to VC.
+  - No cli I can find, so settings must be imported by hand once the IDEs are installed.
+- LaTeX
+  - brew does not provide the simpler CLI tools like pdflatex - you have to get the whole MacTex cask, which is a 2GB install & a lot more than I currently want.
 
 # Inspirations
 
-* [Getting started with dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
-* [Mathias Bynens OSX settings list](https://github.com/mathiasbynens/dotfiles/blob/master/.macos)
+- [Getting started with dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)
+- [Mathias Bynens OSX settings list](https://github.com/mathiasbynens/dotfiles/blob/master/.macos)

@@ -18,7 +18,9 @@
 	br = branch
 	co = commit -v
 	ch = checkout
-	ignored = !git ls-files -v | grep "^[[:lower:]]"
+	hidden = !git ls-files -v | grep '^S'
+	hide = update-index --skip-worktree
+	unhide = update-index --no-skip-worktree
 	last = log -1 HEAD
 	nuke = !git reset --hard && git clean -df
 	prune-local = !git branch --merged | tr -d \"*\" | grep -v \"dev\\|develop\\|staging\\|production\\|master\" | xargs -n1 git branch -d

@@ -8,9 +8,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Git.
-alias s="git status --short --branch"
-alias d="git diff"
-alias dcd="git diff --cached"
+alias s="git status --short --branch --untracked-files=all"
+alias d='git diff -- ":(top)" ":(exclude,top)package-lock.json"'
+alias dcd='git diff --cached -- ":(top)" ":(exclude,top)package-lock.json"'
 # See full formatting options: https://git-scm.com/docs/git-log
 # And useful SO answer: https://stackoverflow.com/a/9463536
 alias log="git log --oneline"

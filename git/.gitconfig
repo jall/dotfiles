@@ -15,6 +15,7 @@
 [alias]
 	alias = config --get-regexp ^alias\\.
 	amend = commit --amend
+	back = checkout -
 	br = branch
 	co = commit -v
 	ch = checkout

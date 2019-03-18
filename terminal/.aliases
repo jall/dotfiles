@@ -16,9 +16,23 @@ alias dcd='git diff --cached -- ":(top)" ":(exclude,top)package-lock.json"'
 alias log="git log --oneline"
 # With GPG signature and date (but loses some styles for the branches/tags)
 # alias log="git log --pretty='format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(15,trunc)%ar %C(auto,red)%d %C(auto,reset)%s'"
+alias gaa="git add ."
+alias gaac="git add . && git co"
+alias gam="git amend"
+alias gamn="git amend --no-edit"
+alias gra="git reset ."
 
 # Python.
 alias py='python3'
 
 # Symfony.
 alias sym="app/console"
+
+# NPM
+alias nr="npm run"
+alias ni="npm install"
+
+# Navy
+alias nvd="navy develop"
+alias nvl="navy live"
+alias nvr="navy restart"

@@ -17,8 +17,8 @@ if [ -d "$proj/.git" ] && grep -q '\[remote ' "$proj/.git/config"; then
     padded_commits_behind=$(printf '%3s' "$commits_behind")
     color=$color_bad
     if [[ "$commits_behind" -gt 0 ]]; then
-    git merge --ff-only --quiet @{upstream} && color=$color_good
-    $echo_cmd -e "${color}${padded_commits_behind}${color_reset} $(basename "$proj")"
+      git merge --ff-only --quiet @{upstream} && color=$color_good
+      $echo_cmd -e "${color}${padded_commits_behind}${color_reset} $(basename "$proj")"
     fi
   else
     $echo_cmd -e "${color_bad}  !${color_reset} $(basename "$proj")"

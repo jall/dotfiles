@@ -58,3 +58,9 @@ pull-all() {
   echo "Last fetch: $(cat ~/.config/me/pull-all-last-fetch-date 2>/dev/null)"
   echo "Fetched at: $(date | tee ~/.config/me/pull-all-last-fetch-date)"
 }
+
+add-to-path() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+    PATH="$1${PATH:+":$PATH"}"
+  fi
+}

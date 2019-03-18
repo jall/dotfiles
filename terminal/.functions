@@ -53,7 +53,7 @@ pull-all() {
   echo "$dir"/*/.git | \
     sed 's:\/.git::g' | \
     tr ' ' '\n' | \
-    xargs -n1 git_fetch_project
+    xargs -n1 -P10 git-fetch-project
 
   echo "Last fetch: $(cat ~/.config/me/pull-all-last-fetch-date 2>/dev/null)"
   echo "Fetched at: $(date | tee ~/.config/me/pull-all-last-fetch-date)"

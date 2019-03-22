@@ -17,3 +17,7 @@ export GPG_TTY=$(tty)
 
 # Directory
 export WORK_DIR="${HOME}/Work"
+
+# Enable '**' recursive wildcards in bash.
+# Doesn't take effect for subshells though :/
+shopt -s globstar

@@ -14,3 +14,6 @@ export GOPATH="${HOME}/Personal/go"
 
 # GPG requires this to prompt for signing correctly, e.g. when signing git commits
 export GPG_TTY=$(tty)
+
+# Directory
+export WORK_DIR="${HOME}/Work"

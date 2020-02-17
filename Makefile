@@ -1,6 +1,6 @@
-.PHONY: all symlinks brew brew_bundle yarn osx gpg_key ssh_key
+.PHONY: all symlinks brew brew_bundle npm osx gpg_key ssh_key
 
-all: symlinks brew_bundle yarn osx
+all: symlinks brew_bundle npm osx
 # We only run GPG key gen on install if one doesn't exist yet.
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	$(MAKE) gpg_key
@@ -54,8 +54,8 @@ brew_bundle: brew
 	brew update
 	brew bundle
 
-yarn: brew_bundle
-	yarn global add eslint eslint-cli prettier webpack webpack-dev-server
+npm: brew_bundle
+	npm -g add typescript ts-node eslint eslint-cli prettier
 
 osx:
 	# Save screenshots to the desktop

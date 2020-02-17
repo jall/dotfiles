@@ -1,9 +1,6 @@
 # Personal crud
 export PATH="${HOME}/bin:${HOME}/.dotfiles/bin:${PATH}"
 
-# Yarn binaries - see this issue https://github.com/yarnpkg/yarn/issues/648
-export PATH="${HOME}/.config/yarn/global/node_modules/.bin:${PATH}"
-
 # Python
 export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 

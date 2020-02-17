@@ -1,13 +1,12 @@
 # Include .profile, if it's been created by something.
 if [ -f ~/.profile ]; then
-    source ~/.profile
+  source ~/.profile
 fi
 
 DOTFILES="${HOME}/.dotfiles"
 
 # Include all sub-components for terminals.
-for DOTFILE in `find ${DOTFILES}/terminal`
-do
+for DOTFILE in $(find ${DOTFILES}/terminal); do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 unset DOTFILE
@@ -17,7 +16,7 @@ unset DOTFILE
 
 # This one allows for machine specific/temporary overides.
 if [ -f ~/.extra ]; then
-    source ~/.extra
+  source ~/.extra
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

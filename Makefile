@@ -21,7 +21,6 @@ symlinks:
 	mkdir -p ${HOME}/Personal/
 	mkdir -p ${HOME}/Personal/go
 	mkdir -p ${HOME}/Work/
-	# This seemed to wipe this directory completely - is that correct behaviour?
 	mkdir -p ${SUBLIME_USER_DIR}
 
 	# Symlink dotfiles
@@ -35,6 +34,8 @@ symlinks:
 
 	@ln -svfn $(CURDIR)/vim/.vimrc ${HOME}
 	@ln -svfn $(CURDIR)/vim/colors/ ${HOME}/.vim
+
+	@ln -svfn $(CURDIR)/.prettierrc ${HOME}
 
 	@ln -svfn $(CURDIR)/lein/profiles.clj ${HOME}/.lein
 

@@ -21,6 +21,8 @@ symlinks:
 	mkdir -p ${HOME}/Personal/
 	mkdir -p ${HOME}/Personal/go
 	mkdir -p ${HOME}/Work/
+	# This seemed to wipe this directory completely - is that correct behaviour?
+	mkdir -p ${SUBLIME_USER_DIR}
 
 	# Symlink dotfiles
 	@ln -svfn $(CURDIR)/system/.bash_profile ${HOME}
@@ -28,6 +30,7 @@ symlinks:
 	@ln -svfn $(CURDIR)/system/.editorconfig ${HOME}
 
 	@ln -svfn $(CURDIR)/git/.gitconfig ${HOME}
+	@ln -svfn $(CURDIR)/git/.gitattributes ${HOME}
 	@ln -svfn $(CURDIR)/git/.gitignore_global ${HOME}
 
 	@ln -svfn $(CURDIR)/vim/.vimrc ${HOME}

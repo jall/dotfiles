@@ -1,6 +1,6 @@
-.PHONY: all symlinks brew brew_bundle composer yarn platform osx gpg_key ssh_key
+.PHONY: all symlinks brew brew_bundle yarn osx gpg_key ssh_key
 
-all: symlinks brew_bundle composer yarn osx
+all: symlinks brew_bundle yarn osx
 # We only run GPG key gen on install if one doesn't exist yet.
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	$(MAKE) gpg_key
@@ -44,9 +44,6 @@ symlinks:
 	@ln -svfn $(CURDIR)/sublime-text/Preferences.sublime-settings ${SUBLIME_USER_DIR}
 	@ln -svfn $(CURDIR)/sublime-text/Package\ Control.sublime-settings ${SUBLIME_USER_DIR}
 
-	@ln -svfn $(CURDIR)/composer/composer.json ${HOME}/.composer
-	@ln -svfn $(CURDIR)/composer/composer.lock ${HOME}/.composer
-
 BREW_INSTALLED := $(shell command -v brew 2> /dev/null)
 brew:
 ifndef BREW_INSTALLED
@@ -57,20 +54,8 @@ brew_bundle: brew
 	brew update
 	brew bundle
 
-composer: brew_bundle symlinks
-	composer global install
-
 yarn: brew_bundle
 	yarn global add eslint eslint-cli prettier webpack webpack-dev-server
-
-PLATFORM_INSTALLED := $(shell command -v platform 2> /dev/null)
-platform: brew_bundle
-ifndef PLATFORM_INSTALLED
-	curl -sS https://platform.sh/cli/installer | php
-	# This has made some automatic (irritating) changes to .bash_profile,
-	# so let's revert those.
-	git checkout -- $(CURDIR)/system/.bash_profile
-endif
 
 osx:
 	# Save screenshots to the desktop

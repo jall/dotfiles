@@ -63,15 +63,11 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 # Todo
 
-- Update Brewfile
-  - Haskell
-  - postgres
-  - Add `jq` as dep
 - Symlink stack config
 - Go through Candide bits and include generic niceties for future use
-- Swap from `yarn` to `npm`?
 - Use `add_to_path` function for .path?
 - Strip `.` from terminal sections
+- Add per-company folders to install specific useful tools?
 
 ## Bugs
 

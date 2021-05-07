@@ -18,3 +18,8 @@ export WORK_DIR="${HOME}/Work"
 # Enable '**' recursive wildcards in bash.
 # Doesn't take effect for subshells though :/
 shopt -s globstar
+
+# Use fd (or ripgrep) so fzf doesn't search gitignored files by default
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+# Allows fuzzy finding in the middle fo expressions via CTRL-T
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

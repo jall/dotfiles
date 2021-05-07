@@ -36,3 +36,5 @@ alias ni="npm install"
 alias nvd="navy develop"
 alias nvl="navy live"
 alias nvr="navy restart"
+
+alias f="fzf"

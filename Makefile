@@ -13,14 +13,15 @@ endif
 SUBLIME_USER_DIR := ${HOME}/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 symlinks:
 	# Ensure required directories exist before copying into them
-	mkdir -p ${HOME}/.vim/
-	mkdir -p ${HOME}/.lein/
-	mkdir -p ${HOME}/.gnupg/
 	mkdir -p ${HOME}/.config/me
-	mkdir -p ${HOME}/bin/
-	mkdir -p ${HOME}/Personal/
+	mkdir -p ${HOME}/.gnupg
+	mkdir -p ${HOME}/.lein
+	mkdir -p ${HOME}/.stack
+	mkdir -p ${HOME}/.vim
+	mkdir -p ${HOME}/bin
+	mkdir -p ${HOME}/Personal
 	mkdir -p ${HOME}/Personal/go
-	mkdir -p ${HOME}/Work/
+	mkdir -p ${HOME}/Work
 	mkdir -p ${SUBLIME_USER_DIR}
 
 	# Symlink dotfiles
@@ -38,6 +39,8 @@ symlinks:
 	@ln -svfn $(CURDIR)/.prettierrc ${HOME}
 
 	@ln -svfn $(CURDIR)/lein/profiles.clj ${HOME}/.lein
+
+	@ln -svfn $(CURDIR)ln -svfn $(pwd)/stack/config.yaml ${HOME}/.stack/config.yaml
 
 	@ln -svfn $(CURDIR)/gpg/gpg-agent.conf ${HOME}/.gnupg
 

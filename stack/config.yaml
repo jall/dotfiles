@@ -1,0 +1,5 @@
+templates:
+  params:
+    author-name: Jon Hall
+    author-email: code@jall.me
+    github-username: jall

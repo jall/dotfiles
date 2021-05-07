@@ -76,7 +76,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
   - https://github.com/jessfraz/dotfiles
 - Tests
 - Iterm2 settings/colours/keymap
-- Typescript/ts-node
 - Add OSX defaults
 
   - Desktop view 'snap to grid'
@@ -93,15 +92,10 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
     grep -q -F '/usr/local/bin/bash' /etc/shells || sudo echo '/usr/local/bin/bash' >> /etc/shells
     ```
 
-- react-native bits
-- Android build tools
 - Add `GH_TOKEN` notes, or add generator to Makefile
 
 ## Notes
 
-- Jetbrains IDEs
-  - Settings are contained as `settings.jar` file & aren't very nice to VC.
-  - No cli I can find, so settings must be imported by hand once the IDEs are installed.
 - LaTeX
   - brew does not provide the simpler CLI tools like pdflatex - you have to get the whole MacTex cask, which is a 2GB install & a lot more than I currently want.
 

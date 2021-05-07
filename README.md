@@ -87,7 +87,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 - Tests
 - Iterm2 settings/colours/keymap
 - Typescript/ts-node
-- vscode
 - Add OSX defaults
 
   - Desktop view 'snap to grid'

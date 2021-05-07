@@ -77,7 +77,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 ## Bugs
 
 - Fix Sublime text 3 symlinks (crashes due to missing dir)
-- .composer folder in ~ is created as symlink, not folder?
 
 ## Improvements
 

@@ -64,19 +64,9 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 ## Todo
 
 - [Look into using GNU Stow for managing symlinks](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)
-- vscode
-  - Symlink settings
-  - Install extensions in Makefile
-  - [Useful examples](https://stackoverflow.com/questions/35368889/how-to-export-settings-of-visual-studio-code)
-- Symlink stack config
 - Go through Candide bits and include generic niceties for future use
 - Use `add_to_path` function for .path?
-- Strip `.` from terminal sections
 - Add per-company folders to install specific useful tools?
-
-## Bugs
-
-- Fix Sublime text 3 symlinks (crashes due to missing dir)
 
 ## Improvements
 
@@ -95,7 +85,6 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
   - Login items (will brew services do this?)
   - Docker for Mac
   - Slack
-  - SensibleSideButtons
   - Configure trackpad settings - disable 'natural' scroll
   - Set default login shell to `/usr/local/bin/bash` to use updated Brew bash instead of OSX bundled one; see [this answer](https://superuser.com/a/48241)
     May want something like this too if it needs to be in the list of allowed shells

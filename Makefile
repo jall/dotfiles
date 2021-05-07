@@ -10,7 +10,6 @@ ifeq ('', $(shell find ${HOME}/.ssh -iname "*.pub"))
 	$(MAKE) ssh_key
 endif
 
-SUBLIME_USER_DIR := ${HOME}/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 symlinks:
 	# Ensure required directories exist before copying into them
 	mkdir -p ${HOME}/.config/me
@@ -22,7 +21,6 @@ symlinks:
 	mkdir -p ${HOME}/Personal
 	mkdir -p ${HOME}/Personal/go
 	mkdir -p ${HOME}/Work
-	mkdir -p ${SUBLIME_USER_DIR}
 
 	# Symlink dotfiles
 	@ln -svfn $(CURDIR)/system/.bash_profile ${HOME}
@@ -43,9 +41,6 @@ symlinks:
 	@ln -svfn $(CURDIR)ln -svfn $(pwd)/stack/config.yaml ${HOME}/.stack/config.yaml
 
 	@ln -svfn $(CURDIR)/gpg/gpg-agent.conf ${HOME}/.gnupg
-
-	@ln -svfn $(CURDIR)/sublime-text/Preferences.sublime-settings ${SUBLIME_USER_DIR}
-	@ln -svfn $(CURDIR)/sublime-text/Package\ Control.sublime-settings ${SUBLIME_USER_DIR}
 
 BREW_INSTALLED := $(shell command -v brew 2> /dev/null)
 brew:

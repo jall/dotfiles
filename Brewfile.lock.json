@@ -15,6 +15,9 @@
       },
       "homebrew/services": {
         "revision": "a99cbd09a128d401178c3bc4f67cf90de8bc0ab6"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "d5c6d711a41f218798c97aabd600635a8038cf91"
       }
     },
     "brew": {
@@ -1137,6 +1140,8 @@
             }
           }
         }
+      },
+      "font-fira-code": {
       }
     },
     "cask": {
@@ -1204,6 +1209,12 @@
         "version": "latest",
         "options": {
           "full_name": "firefox-developer-edition"
+        }
+      },
+      "font-fira-code": {
+        "version": "5.2",
+        "options": {
+          "full_name": "font-fira-code"
         }
       }
     }

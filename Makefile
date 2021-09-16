@@ -19,11 +19,10 @@ symlinks:
 	mkdir -p ${HOME}/.vim
 	mkdir -p ${HOME}/bin
 	mkdir -p ${HOME}/Personal
-	mkdir -p ${HOME}/Personal/go
 	mkdir -p ${HOME}/Work
 
 	# Symlink dotfiles
-	@ln -svfn $(CURDIR)/system/.bash_profile ${HOME}
+	@ln -svfn $(CURDIR)/system/.zshrc ${HOME}
 	@ln -svfn $(CURDIR)/system/.inputrc ${HOME}
 	@ln -svfn $(CURDIR)/system/.editorconfig ${HOME}
 

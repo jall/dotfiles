@@ -84,6 +84,11 @@ osx:
 	defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 	defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
+	# Dock location
+	defaults write com.apple.Dock orientation -string left
+	defaults write com.apple.Dock pinning -string middle
+	defaults write com.apple.Dock autohide -bool TRUE
+
 	# Disable the sound effects on boot (requires sudo)
 	sudo nvram SystemAudioVolume=" "
 

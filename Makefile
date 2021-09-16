@@ -38,7 +38,7 @@ symlinks:
 
 	@ln -svfn $(CURDIR)/lein/profiles.clj ${HOME}/.lein
 
-	@ln -svfn $(CURDIR)ln -svfn $(pwd)/stack/config.yaml ${HOME}/.stack/config.yaml
+	@ln -svfn $(CURDIR)/stack/config.yaml ${HOME}/.stack/config.yaml
 
 	@ln -svfn $(CURDIR)/gpg/gpg-agent.conf ${HOME}/.gnupg
 

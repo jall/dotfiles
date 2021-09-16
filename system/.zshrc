@@ -5,6 +5,13 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+################
+# Autocomplete #
+################
+
+# brew --prefix zsh-autosuggestions
+source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 ###########
 # Aliases #
 ###########
@@ -151,6 +158,13 @@ add-to-path() {
     PATH="$1${PATH:+":$PATH"}"
   fi
 }
+
+##############
+# Navigation #
+##############
+
+bindkey "\e\e[D" backward-word
+bindkey "\e\e[C" forward-word
 
 ##########
 # Prompt #

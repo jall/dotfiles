@@ -146,6 +146,10 @@ add-to-path() {
 # Shell navigation #
 ####################
 
+# Use bash-like word definitions for navigation and operations
+autoload -Uz select-word-style
+select-word-style bash
+
 bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 

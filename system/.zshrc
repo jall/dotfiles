@@ -20,11 +20,6 @@ source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosugg
 alias ls='ls -aG'
 alias ll='ls -ahlFG'
 
-# Navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
 # Git.
 alias s="git status --short --branch --untracked-files=all"
 alias d='git diff -- ":(top)" ":(exclude,top)package-lock.json"'
@@ -43,18 +38,6 @@ alias gra="git reset ."
 # Python.
 alias py='python3'
 
-# Symfony.
-alias sym="app/console"
-
-# NPM
-alias nr="npm run"
-alias ni="npm install"
-
-# Navy
-alias nvd="navy develop"
-alias nvl="navy live"
-alias nvr="navy restart"
-
 alias f="fzf"
 
 ###########
@@ -62,7 +45,7 @@ alias f="fzf"
 ###########
 
 # Add timestamps to command history
-export HISTTIMEFORMAT="%F %T "
+# export HISTTIMEFORMAT="%y-%m-%d %T "
 
 # Add some colour to grep by default
 export GREP_OPTIONS='--color=auto'
@@ -75,7 +58,7 @@ export WORK_DIR="${HOME}/Work"
 
 # Use fd (or ripgrep) so fzf doesn't search gitignored files by default
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# Allows fuzzy finding in the middle fo expressions via CTRL-T
+# Allows fuzzy finding in the middle of expressions via CTRL-T
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Personal crud
@@ -159,12 +142,33 @@ add-to-path() {
   fi
 }
 
-##############
-# Navigation #
-##############
+####################
+# Shell navigation #
+####################
 
 bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
+
+###########
+# Options #
+###########
+
+# navigate to directories if entered without a command
+setopt AUTO_CD
+
+# command typo correction
+setopt CORRECT
+setopt CORRECT_ALL
+
+# enable shell command history
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+# adds commands as they are typed, not at shell exit
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
 
 ##########
 # Prompt #

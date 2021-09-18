@@ -64,8 +64,8 @@ brew_bundle: brew
 	brew bundle
 
 osx:
-	# Save screenshots to the desktop
-	defaults write com.apple.screencapture location -string ${HOME}/Desktop
+	# Save screenshots to Downloads
+	defaults write com.apple.screencapture location -string ${HOME}/Downloads
 
 	# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 	defaults write com.apple.screencapture type -string "png"
@@ -92,11 +92,26 @@ osx:
 	defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 	defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-	# Dock
+	# Dock positioning
 	defaults write com.apple.Dock orientation -string left
 	defaults write com.apple.Dock pinning -string middle
 	defaults write com.apple.Dock autohide -bool TRUE
 	defaults write com.apple.dock tilesize -int 32
+
+	# Disable bouncing dock icons
+	defaults write com.apple.dock no-bouncing -bool True
+
+
+	# Battery / Power Adapter - turn display off after 15 min
+	sudo pmset -b displaysleep 15
+	sudo pmset -c displaysleep 15
+
+	# Battery - computer sleep after 30 min
+	sudo pmset -b sleep 30
+
+	# Power Adapter - never sleep when display is off
+	sudo pmset -c sleep 0
+
 
 	# Disable the sound effects on boot (requires sudo)
 	sudo nvram SystemAudioVolume=" "

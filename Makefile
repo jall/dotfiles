@@ -1,13 +1,15 @@
 .PHONY: all symlinks brew brew_bundle osx gpg_key ssh_key
 
 all: symlinks brew_bundle osx
-# We only run GPG key gen on install if one doesn't exist yet.
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	$(MAKE) gpg_key
+else
+	@echo 'GPG key already exists'
 endif
-
 ifeq ('', $(shell find ${HOME}/.ssh -iname "*.pub"))
 	$(MAKE) ssh_key
+else
+	@echo 'SSH key already exists'
 endif
 
 symlinks:
@@ -40,6 +42,10 @@ symlinks:
 	@ln -svfn $(CURDIR)/stack/config.yaml ${HOME}/.stack/config.yaml
 
 	@ln -svfn $(CURDIR)/gpg/gpg-agent.conf ${HOME}/.gnupg
+
+	# Fix gpg permissions
+	chmod 600 ~/.gnupg/*
+	chmod 700 ~/.gnupg
 
 BREW_INSTALLED := $(shell command -v brew 2> /dev/null)
 brew:

@@ -116,8 +116,11 @@ osx:
 	sudo nvram SystemAudioVolume=" "
 
 terminal:
-	# Add iTerm2 shell integration
+	# Add iTerm shell integration
 	@[ -f ${HOME}/.config/.iterm2_shell_integration.zsh ] || curl -L https://iterm2.com/shell_integration/zsh -o ${HOME}/.config/.iterm2_shell_integration.zsh
+
+	# Import iTerm preferences
+	@ln -svfn $(CURDIR)/iterm/com.googlecode.iterm2.plist ${HOME}/Library/Preferences
 
 gpg_key:
 	# Prompt for GPG key generation

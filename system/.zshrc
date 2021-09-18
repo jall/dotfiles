@@ -3,7 +3,7 @@ if [ -f ~/.extra ]; then
   source ~/.extra
 fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.config/.iterm2_shell_integration.zsh" && source "${HOME}/.config/.iterm2_shell_integration.zsh"
 
 ################
 # Autocomplete #

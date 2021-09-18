@@ -1,6 +1,6 @@
-.PHONY: base personal givedirectly symlinks brew brew_bundle osx gpg_key ssh_key
+.PHONY: base personal givedirectly symlinks brew brew_bundle osx terminal gpg_key ssh_key
 
-all: symlinks brew_bundle osx
+all: symlinks brew_bundle terminal osx
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	$(MAKE) gpg_key
 else
@@ -112,9 +112,12 @@ osx:
 	# Power Adapter - never sleep when display is off
 	sudo pmset -c sleep 0
 
-
 	# Disable the sound effects on boot (requires sudo)
 	sudo nvram SystemAudioVolume=" "
+
+terminal:
+	# Add iTerm2 shell integration
+	@[ -f ${HOME}/.config/.iterm2_shell_integration.zsh ] || curl -L https://iterm2.com/shell_integration/zsh -o ${HOME}/.config/.iterm2_shell_integration.zsh
 
 gpg_key:
 	# Prompt for GPG key generation

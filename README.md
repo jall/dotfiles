@@ -14,12 +14,19 @@ First install Xcode to get git and some basic bits
 xcode-select --install
 ```
 
-Then pull this repo and run make.
+Pull this repo
 
 ```sh
 git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
 cd ${HOME}/.dotfiles
-make
+```
+
+Run the appropriate make command
+
+```sh
+make personal
+make $WORKPLACE
+# just `make` for the basics
 ```
 
 ### Git

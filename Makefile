@@ -1,4 +1,4 @@
-.PHONY: all symlinks brew brew_bundle osx gpg_key ssh_key
+.PHONY: base personal givedirectly symlinks brew brew_bundle osx gpg_key ssh_key
 
 all: symlinks brew_bundle osx
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
@@ -11,6 +11,12 @@ ifeq ('', $(shell find ${HOME}/.ssh -iname "*.pub"))
 else
 	@echo 'SSH key already exists'
 endif
+
+personal: base
+	brew bundle --file=overrides/personal/Brewfile
+
+givedirectly: base
+	brew bundle --file=overrides/givedirectly/Brewfile
 
 symlinks:
 	# Ensure required directories exist before copying into them

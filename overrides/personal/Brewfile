@@ -1,0 +1,6 @@
+brew "ghc"
+brew "cabal-install"
+brew "clojure"
+brew "haskell-stack"
+brew "leiningen"
+brew "openjdk"

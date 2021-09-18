@@ -1,6 +1,6 @@
 .PHONY: base personal givedirectly symlinks brew brew_bundle osx terminal gpg_key ssh_key
 
-all: symlinks brew_bundle terminal osx
+base: symlinks brew_bundle terminal osx
 ifeq ('',$(shell gpg --list-secret-keys | grep sec))
 	$(MAKE) gpg_key
 else

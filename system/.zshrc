@@ -51,7 +51,7 @@ alias f="fzf"
 export GREP_OPTIONS='--color=auto'
 
 # GPG requires this to prompt for signing correctly, e.g. when signing git commits
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 # Directory
 export WORK_DIR="${HOME}/Work"

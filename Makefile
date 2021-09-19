@@ -115,6 +115,9 @@ osx:
 	# Disable the sound effects on boot (requires sudo)
 	sudo nvram SystemAudioVolume=" "
 
+	# Disable UI sound effects
+	defaults write 'Apple Global Domain' com.apple.sound.uiaudio.enabled -bool false
+
 terminal:
 	# Add iTerm shell integration
 	@[ -f ${HOME}/.config/.iterm2_shell_integration.zsh ] || curl -L https://iterm2.com/shell_integration/zsh -o ${HOME}/.config/.iterm2_shell_integration.zsh

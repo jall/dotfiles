@@ -21,12 +21,12 @@ git clone https://github.com/jall/dotfiles.git "${HOME}/.dotfiles"
 cd ${HOME}/.dotfiles
 ```
 
-Run the appropriate make command
+Run the appropriate make commands
 
 ```sh
+make base
 make personal
 make $WORKPLACE
-# just `make` for the basics
 ```
 
 ### Git

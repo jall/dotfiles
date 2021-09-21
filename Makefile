@@ -12,10 +12,10 @@ else
 	@echo 'SSH key already exists'
 endif
 
-personal: base
+personal: brew
 	brew bundle --file=overrides/personal/Brewfile
 
-givedirectly: base
+givedirectly: brew
 	brew bundle --file=overrides/givedirectly/Brewfile
 
 symlinks:

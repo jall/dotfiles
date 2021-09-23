@@ -70,10 +70,9 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 ## Todo
 
+- [Calva](https://calva.io/) for Clojure, instead of Cursive/Intellij
 - [Look into using GNU Stow for managing symlinks](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)
-- Go through Candide bits and include generic niceties for future use
 - Use `add_to_path` function for .path?
-- Add per-company folders to install specific useful tools?
 
 ## Improvements
 
@@ -82,23 +81,11 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
   - https://github.com/mattbrictson/dotfiles
   - https://github.com/jessfraz/dotfiles
 - Tests
-- Iterm2 settings/colours/keymap
 - Add OSX defaults
-
   - Desktop view 'snap to grid'
-  - Dock on the right
-  - Dock on the top right? Old blogs suggesting CLI changes possible but didn't work on High Sierra
   - Login items (will brew services do this?)
   - Docker for Mac
   - Slack
-  - Configure trackpad settings - disable 'natural' scroll
-  - Set default login shell to `/usr/local/bin/bash` to use updated Brew bash instead of OSX bundled one; see [this answer](https://superuser.com/a/48241)
-    May want something like this too if it needs to be in the list of allowed shells
-
-    ```sh
-    grep -q -F '/usr/local/bin/bash' /etc/shells || sudo echo '/usr/local/bin/bash' >> /etc/shells
-    ```
-
 - Add `GH_TOKEN` notes, or add generator to Makefile
 
 ## Notes

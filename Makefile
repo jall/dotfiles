@@ -99,8 +99,10 @@ osx:
 	defaults write com.apple.dock tilesize -int 32
 
 	# Disable bouncing dock icons
-	defaults write com.apple.dock no-bouncing -bool True
+	defaults write com.apple.dock no-bouncing -bool true
 
+	# Stop recent apps leaving icons in the Dock
+	defaults write com.apple.dock show-recents -bool false
 
 	# Battery / Power Adapter - turn display off after 15 min
 	sudo pmset -b displaysleep 15

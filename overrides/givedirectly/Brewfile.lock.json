@@ -53,11 +53,45 @@
             }
           }
         }
+      },
+      "awscli": {
+        "version": "2.2.40",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_big_sur": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:f97c7b81c21ab6ce9e7f85efd0f5337b6dec77f7f451bfc19e393810d22660f6",
+              "sha256": "f97c7b81c21ab6ce9e7f85efd0f5337b6dec77f7f451bfc19e393810d22660f6"
+            },
+            "big_sur": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:63575b731ca241de292153a5f60a19b10150f99b5b333c1c713a910d8cf46861",
+              "sha256": "63575b731ca241de292153a5f60a19b10150f99b5b333c1c713a910d8cf46861"
+            },
+            "catalina": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:90ec80fa26bf95b64738026aa05501024d55ed02b8921944d70a64dad8f2229d",
+              "sha256": "90ec80fa26bf95b64738026aa05501024d55ed02b8921944d70a64dad8f2229d"
+            },
+            "mojave": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:70d1e49973ed0a8d910107f2b78dd0b91fcb2986460b17b9cfd3ee130e46f69f",
+              "sha256": "70d1e49973ed0a8d910107f2b78dd0b91fcb2986460b17b9cfd3ee130e46f69f"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/awscli/blobs/sha256:6d1f03ed8807f4c0a45a70761202d19f1f18574f91f89c3d420da17b58657139",
+              "sha256": "6d1f03ed8807f4c0a45a70761202d19f1f18574f91f89c3d420da17b58657139"
+            }
+          }
+        }
       }
     },
     "tap": {
       "aws/tap": {
-        "revision": "50c88bacde51e66ad0df4dceee0d5c0e10d33a86"
+        "revision": "0a3c1acb67b1f16f46809a06c73e17ae8167d999"
       }
     }
   },
@@ -66,7 +100,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.13",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "b7255e563a701ba940d22d6519d30d6dbcf70573",
+        "Homebrew/homebrew-core": "797bbae2e9ef8858cf4459fb8a32488cbbd506f1",
         "CLT": "12.5.1.0.1.1623191612",
         "Xcode": "12.5",
         "macOS": "11.5.2"

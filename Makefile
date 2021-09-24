@@ -31,6 +31,7 @@ symlinks:
 
 	# Symlink dotfiles
 	@ln -svfn $(CURDIR)/system/.zshrc ${HOME}
+	@ln -svfn $(CURDIR)/system/.zshenv ${HOME}
 	@ln -svfn $(CURDIR)/system/.inputrc ${HOME}
 	@ln -svfn $(CURDIR)/system/.editorconfig ${HOME}
 

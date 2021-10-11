@@ -156,7 +156,6 @@ setopt AUTO_CD
 
 # command typo correction
 setopt CORRECT
-setopt CORRECT_ALL
 
 # enable shell command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history

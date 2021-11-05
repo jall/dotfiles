@@ -70,6 +70,7 @@ For automatic signing, the `pinentry-mac` program can be used. This will pop up 
 
 ## Todo
 
+- enable filevault
 - [Calva](https://calva.io/) for Clojure, instead of Cursive/Intellij
 - [Look into using GNU Stow for managing symlinks](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)
 - Use `add_to_path` function for .path?

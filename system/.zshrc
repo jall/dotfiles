@@ -10,7 +10,7 @@ test -e "${HOME}/.config/.iterm2_shell_integration.zsh" && source "${HOME}/.conf
 ################
 
 # brew --prefix zsh-autosuggestions
-source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ###########
 # Aliases #
@@ -65,6 +65,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 if test “${PS1+set}”; then
   export CDPATH="${CDPATH}:${HOME}/Work"
 fi
+
+# brew env vars
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #############
 # Functions #

@@ -21,7 +21,7 @@ brew "node@14", link: true
 brew "parallel"
 brew "pinentry-mac"
 brew "pipx"
-brew "python@3.7"
+brew "python"
 brew "rename"
 brew "ripgrep"
 brew "shellcheck"

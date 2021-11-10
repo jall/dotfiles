@@ -26,8 +26,8 @@ symlinks:
 	mkdir -p ${HOME}/.stack
 	mkdir -p ${HOME}/.vim
 	mkdir -p ${HOME}/bin
-	mkdir -p ${HOME}/Personal
-	mkdir -p ${HOME}/Work
+	mkdir -p ${HOME}/personal
+	mkdir -p ${HOME}/work
 
 	# Symlink dotfiles
 	@ln -svfn $(CURDIR)/system/.zshrc ${HOME}

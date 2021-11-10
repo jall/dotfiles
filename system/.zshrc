@@ -54,7 +54,7 @@ export GREP_OPTIONS='--color=auto'
 export GPG_TTY=$TTY
 
 # Directory
-export WORK_DIR="${HOME}/Work"
+export WORK_DIR="${HOME}/work"
 
 # Use fd (or ripgrep) so fzf doesn't search gitignored files by default
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
@@ -63,7 +63,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Base directories for `cd`
 if test “${PS1+set}”; then
-  export CDPATH="${CDPATH}:${HOME}/Work"
+  export CDPATH="${CDPATH}:${HOME}/work"
 fi
 
 # brew env vars

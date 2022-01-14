@@ -1,6 +1,7 @@
 tap "aws/tap"
 brew "awscli"
 brew "aws-sam-cli"
+brew "docker-credential-helper-ecr"
 brew "poetry"
 brew "python@3.8"
 brew "python@3.9"

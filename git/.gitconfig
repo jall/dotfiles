@@ -48,6 +48,7 @@
 	prune = true
 [rebase]
 	autostash = true
+	updateRefs = true
 [merge]
 	conflictStyle = zdiff3
 [interactive]

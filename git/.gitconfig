@@ -34,3 +34,18 @@
 	defaultBranch = main
 [include]
 	path = ~/.gitconfig_local
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
+[rebase]
+	autostash = true
+[merge]
+	conflictStyle = zdiff3

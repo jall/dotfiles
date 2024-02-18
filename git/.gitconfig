@@ -52,3 +52,5 @@
 	conflictStyle = zdiff3
 [interactive]
 	diffFilter = delta
+[diff]
+	algorithm = histogram
